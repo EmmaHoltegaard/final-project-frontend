@@ -1,7 +1,10 @@
 import React from 'react';
+import { Navbar } from './Navbar';
 
 export const Header = () => {
   return (
-    <h1>This is the startingpage</h1>
+    <header>
+      <Navbar />
+    </header>
   )
 }

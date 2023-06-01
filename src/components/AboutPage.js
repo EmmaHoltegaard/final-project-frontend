@@ -2,6 +2,6 @@ import React from 'react';
 
 export const AboutPage = () => {
   return (
-    <h1>This is the startingpage</h1>
+    <h1>This is the about page</h1>
   )
 }
