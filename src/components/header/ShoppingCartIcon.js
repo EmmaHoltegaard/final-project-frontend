@@ -2,9 +2,9 @@ import React from 'react';
 
 export const ShoppingCartIcon = () => {
   return (
-    <div>Cart</div>
+    <div>Cart-icon</div>
   )
 }
 
 // clicking the cart icon should toggle down the cart-section
-// (currently stored in shop-folder) similar to hamburger menu.
+// (currently stored in header-folder) similar to hamburger menu.
