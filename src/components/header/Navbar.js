@@ -21,9 +21,10 @@ export const Navbar = () => {
   return (
     <div>
       <NavOptions>
-        <div><StyledNavLink to="/">Home</StyledNavLink></div>
-        <div><StyledNavLink to="/about">About</StyledNavLink></div>
-        <div><StyledNavLink to="/contact">Contact</StyledNavLink></div>
+        <div><StyledNavLink to="/">Forside</StyledNavLink></div>
+        <div><StyledNavLink to="/praktiskInfo">Praktisk info</StyledNavLink></div>
+        <div><StyledNavLink to="/minTilgang">Min tilgang</StyledNavLink></div>
+        <div><StyledNavLink to="/kontakt">Kontakt</StyledNavLink></div>
         <div><StyledNavLink to="/shop">Shop</StyledNavLink></div>
       </NavOptions>
     </div>

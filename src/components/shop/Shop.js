@@ -1,7 +1,7 @@
 import React from 'react';
 import { ProductList } from './ProductList'
 
-export const ShopPage = () => {
+export const Shop = () => {
   return (
     <section>
       <ProductList />
