@@ -11,7 +11,3 @@ export const Shop = () => {
     </div>
   )
 }
-
-// If loading = true: shows loading screen
-// else, shows list of products
-// or: single product...

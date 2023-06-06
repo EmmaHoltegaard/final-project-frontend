@@ -3,7 +3,7 @@ import { LoadingPage } from 'components/LoadingPage';
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchProducts } from 'reducers/products';
-import { cart } from 'reducers/cart'
+import { ProductListItem } from './ProductListItem';
 
 export const ProductList = () => {
   const dispatch = useDispatch()
@@ -24,11 +24,7 @@ export const ProductList = () => {
       <div>
         <h2>Products</h2>
         {productsList.map((item) => (
-          <div key={item._id}>
-            <p>{item.name}</p>
-            <p>{item.price}</p>
-            <button type="button" onClick={() => dispatch(cart.actions.addItem(item))}>Add to basked</button>
-          </div>
+          <ProductListItem key={item._id} item={item} />
         ))}
       </div>
     )
