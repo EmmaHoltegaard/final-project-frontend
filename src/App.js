@@ -6,7 +6,7 @@ import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import { MinTilgang } from 'components/MinTilgang';
 import { Kontakt } from 'components/contact/Kontakt';
 import { Shop } from 'components/shop/Shop';
-import { PraktiskInfo } from 'components/PraktiskInfo';
+import { PraktiskInfo } from './components/praktiskInfo/PraktiskInfo'
 import { products } from './reducers/products'
 import { cart } from './reducers/cart'
 import { ui } from './reducers/ui'

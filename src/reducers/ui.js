@@ -5,7 +5,8 @@ export const ui = createSlice({
   initialState: {
     isLoading: false,
     cartIsActive: false,
-    menuIsActive: false
+    menuIsActive: false,
+    activeTopicId: null
   },
   reducers: {
     setIsLoading: (state, action) => {
@@ -16,6 +17,9 @@ export const ui = createSlice({
     },
     toggleMenu: (state) => {
       state.menuIsActive = !state.menuIsActive;
+    },
+    toggleInfo: (state, action) => {
+      state.activeTopicId = action.payload
     }
   }
 })

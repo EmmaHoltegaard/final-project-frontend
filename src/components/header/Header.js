@@ -22,7 +22,11 @@ export const Header = () => {
     dispatch(ui.actions.toggleMenu())
   }
 
-  // mount both icon and navbar(one shows on big screen, one doesn't). Add toggle to icon.
+  // On large screens: LargeScreenNav is mounted
+  // On small screens: SmallScreenNav is mounted.
+  // if menuIsActive = true, the navmenu will show
+  // if cartIsActive = true, the cart will show
+
   return (
     <section>
       <HeaderWrapper>

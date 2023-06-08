@@ -1,7 +1,8 @@
 import React from 'react';
+import { InfoAccordion } from './InfoAccordion';
 
 export const PraktiskInfo = () => {
   return (
-    <h1>Praktisk information</h1>
+    <InfoAccordion />
   )
 }
