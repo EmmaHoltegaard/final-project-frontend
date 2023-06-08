@@ -15,7 +15,7 @@ export const ProductList = () => {
     dispatch(fetchProducts());
   }, [dispatch])
 
-  const isLoading = useSelector((store) => store.loading.isLoading)
+  const isLoading = useSelector((store) => store.ui.isLoading)
 
   if (isLoading) {
     return (<LoadingPage />)

@@ -3,7 +3,7 @@
 
 import { createSlice } from '@reduxjs/toolkit'
 import { API_KEY_ALL, BASE_URL } from 'utils/urls'
-import { loading } from 'reducers/loading'
+import { ui } from 'reducers/ui'
 
 export const products = createSlice({
   name: 'products',
@@ -21,7 +21,7 @@ export const products = createSlice({
 // REMEMBER: Add loading screen
 export const fetchProducts = () => {
   return (dispatch) => {
-    dispatch(loading.actions.setIsLoading(true));
+    dispatch(ui.actions.setIsLoading(true));
     fetch(`${BASE_URL}${API_KEY_ALL}`)
       .then((res) => res.json())
       .then((data) => {
@@ -29,7 +29,7 @@ export const fetchProducts = () => {
       })
       .finally(() => {
         setTimeout(() => {
-          dispatch(loading.actions.setIsLoading(false));
+          dispatch(ui.actions.setIsLoading(false));
         }, 500);
       });
   };

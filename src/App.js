@@ -9,7 +9,7 @@ import { Shop } from 'components/shop/Shop';
 import { PraktiskInfo } from 'components/PraktiskInfo';
 import { products } from './reducers/products'
 import { cart } from './reducers/cart'
-import { loading } from './reducers/loading'
+import { ui } from './reducers/ui'
 import { Forside } from './components/forside/Forside';
 import { NotFound } from './components/NotFound';
 import { Header } from './components/header/Header';
@@ -19,7 +19,7 @@ import { SingleProduct } from './components/shop/SingleProduct'
 const reducer = combineReducers({
   cart: cart.reducer,
   products: products.reducer,
-  loading: loading.reducer
+  ui: ui.reducer
 })
 
 // Use the reducer to create the global store
