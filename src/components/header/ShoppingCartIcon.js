@@ -1,8 +1,8 @@
 import React from 'react';
 
-export const ShoppingCartIcon = () => {
+export const ShoppingCartIcon = ({ onCartClick }) => {
   return (
-    <div>Cart-icon</div>
+    <button type="button" onClick={onCartClick}>Cart-icon</button>
   )
 }
 
