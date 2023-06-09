@@ -7,6 +7,7 @@ import { ShoppingCartIcon } from './ShoppingCartIcon';
 import { ShoppingCart } from '../shop/ShoppingCart'
 import { HamburgerIcon } from './HamburgerIcon';
 import { HamburgerMenu } from './HamburgerMenu';
+import { Title } from '../GlobalStyles'
 
 export const Header = () => {
   // selector to get the current state.
@@ -30,7 +31,7 @@ export const Header = () => {
   return (
     <section>
       <HeaderWrapper>
-        <div>ICON + NAME</div>
+        <Title>Normfri <br /> terapi</Title>
         <LargeScreenNav>
           <Navbar />
         </LargeScreenNav>
