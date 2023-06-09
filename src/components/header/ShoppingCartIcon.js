@@ -1,12 +1,15 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import shoppingCart from 'svg/shopping-bag.svg';
 import { IconButton } from '../GlobalStyles';
 
 export const ShoppingCartIcon = ({ onCartClick }) => {
+  const selectedItems = useSelector((store) => store.cart.items)
+  const selectedItemsCount = selectedItems.reduce((total, item) => total + item.quantity, 0)
   return (
     <IconButton type="button" onClick={onCartClick}>
-      <Icon src={shoppingCart} alt="shopping cart" /><ItemCount>0</ItemCount>
+      <Icon src={shoppingCart} alt="shopping cart" /><ItemCount>{selectedItemsCount}</ItemCount>
     </IconButton>
   )
 }

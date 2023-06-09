@@ -32,10 +32,11 @@ export const Header2 = styled.h3`
 `
 
 export const TextPurple = styled.p`
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.875rem;
   color: var(--purple);
+  margin: 0 3px;
 `
 
 export const TextWhite = styled(TextPurple)`

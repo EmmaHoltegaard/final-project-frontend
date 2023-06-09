@@ -40,7 +40,7 @@ const StyledNavLink = styled(NavLink)`
   &:hover {
     text-decoration: underline;
   }
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     background-color: var(--purple);
     padding: 0.5em;
     border-bottom: 1px var(--white) solid;

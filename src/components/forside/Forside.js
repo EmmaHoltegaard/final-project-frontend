@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import styled from 'styled-components/macro'
 import head from 'svg/head.svg'
 import { Intro } from './Intro'
@@ -16,7 +17,7 @@ export const Forside = () => {
               <Header1>Normfri terapi <br /><StyledSpan>/v Rebekka Pi</StyledSpan></Header1>
               <WelcomeText>Velkommen til - dejligt du er her.</WelcomeText>
             </InnerTextWrapper>
-            <Button type="button">Kontakt mig</Button>
+            <Link to="/kontakt"><Button type="button">Kontakt mig</Button></Link>
           </TextWrapper>
         </ContentWrapper>
       </SectionWrapper>
@@ -39,6 +40,7 @@ const ContentWrapper = styled.div`
   padding: 20px 0 20px 0;
   gap: 25px;
   align-items: center;
+  margin-bottom: 30px;
   @media (min-width: 620px) {
     flex-direction: row;
     gap: 5px;
@@ -73,7 +75,7 @@ const Button = styled(StyledButton)`
   width: fit-content;
   padding: 0.6em 1.2em;
   border-radius: 25px;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   &:Hover{
     background-color: var(--purple);
   }

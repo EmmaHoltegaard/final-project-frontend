@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import styled from 'styled-components/macro';
 import { ui } from 'reducers/ui'
+// import { cart } from 'reducers/cart'
 import { Navbar } from './Navbar';
 import { ShoppingCartIcon } from './ShoppingCartIcon';
 import { ShoppingCart } from '../shop/ShoppingCart'
@@ -12,7 +13,7 @@ import { Title } from '../GlobalStyles'
 export const Header = () => {
   // selector to get the current state.
   const cartIsActive = useSelector((state) => state.ui.cartIsActive);
-  const menuIsActive = useSelector((state) => state.ui.menuIsActive)
+  const menuIsActive = useSelector((state) => state.ui.menuIsActive);
   // define dispatch
   const dispatch = useDispatch();
   // Toggle Function(s)
