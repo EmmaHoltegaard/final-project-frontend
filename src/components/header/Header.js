@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { ui } from 'reducers/ui'
 import { Navbar } from './Navbar';
 import { ShoppingCartIcon } from './ShoppingCartIcon';
@@ -31,14 +31,18 @@ export const Header = () => {
   return (
     <section>
       <HeaderWrapper>
-        <Title>Normfri <br /> terapi</Title>
-        <LargeScreenNav>
-          <Navbar />
-        </LargeScreenNav>
-        <SmallScreenNav>
-          <HamburgerIcon onMenuClick={onMenuClick} />
-        </SmallScreenNav>
-        <ShoppingCartIcon onCartClick={onCartClick} />
+        <LeftWrapper>
+          <Title>Normfri <br /> terapi</Title>
+        </LeftWrapper>
+        <RightWrapper>
+          <LargeScreenNav>
+            <Navbar />
+          </LargeScreenNav>
+          <SmallScreenNav>
+            <HamburgerIcon onMenuClick={onMenuClick} />
+          </SmallScreenNav>
+          <ShoppingCartIcon onCartClick={onCartClick} />
+        </RightWrapper>
       </HeaderWrapper>
       {menuIsActive && (
         <HamburgerMenu />
@@ -54,22 +58,36 @@ export const Header = () => {
 
 // styled components
 const HeaderWrapper = styled.header`
-  border: pink dotted 4px;
   height: 10rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
   align-items: center;
-
 `
+
+const LeftWrapper = styled.div`
+  display: flex;
+`
+
+const RightWrapper = styled.div`
+  display: flex;
+  gap: 20px;
+`
+
 const LargeScreenNav = styled.div`
   display: none;
   @media (min-width: 1024px) {
-    display: block;
+    display: flex;
+    width: 525px;
+    margin-right: 10px;
   }
 `
 
 const SmallScreenNav = styled.div`
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: end;
   @media (min-width: 1024px) {
     display: none;
   }

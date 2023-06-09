@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
 /*
 Overskrift (font 36, h2, courier)
@@ -13,7 +13,6 @@ export const Title = styled.h1`
   font-size: 1.625rem;
   line-height: 2rem;
   color: var(--purple);
-  margin-bottom: 1rem;
 `
 
 export const Header1 = styled.h2`
@@ -22,6 +21,7 @@ export const Header1 = styled.h2`
   font-size: 2.375rem;
   font-weight: 700;
   text-align: center;
+  margin-bottom: 1rem;
 `
 
 export const Header2 = styled.h3`
@@ -64,4 +64,17 @@ export const BoldSpan = styled.span`
 
 export const SemiBoldSpan = styled.span`
   font-weight: 600;
+`
+
+export const IconButton = styled.button`
+  border: none;
+  background: none;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  font-family: 'Archivo', sans-serif;
 `

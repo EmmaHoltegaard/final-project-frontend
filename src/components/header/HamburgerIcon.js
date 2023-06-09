@@ -1,7 +1,17 @@
 import React from 'react';
+import menu from 'svg/menu.svg'
+import styled from 'styled-components/macro';
+import { IconButton } from '../GlobalStyles'
 
 export const HamburgerIcon = ({ onMenuClick }) => {
   return (
-    <button type="button" onClick={onMenuClick}>Hamburger</button>
+    <IconButton type="button" onClick={onMenuClick}>
+      <Icon src={menu} alt="hamburger menu" />
+    </IconButton>
   )
 }
+
+const Icon = styled.img`
+height: 50px;
+width: 50px;
+`

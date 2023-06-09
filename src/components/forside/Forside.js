@@ -41,13 +41,12 @@ const ContentWrapper = styled.div`
   align-items: center;
   @media (min-width: 620px) {
     flex-direction: row;
-    gap: 0px;
+    gap: 5px;
   }
 `
 
 const Image = styled.img`
   height: 198px;
-  width: 226px;
 `
 
 const TextWrapper = styled.div`
@@ -62,7 +61,6 @@ const InnerTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
   margin-bottom: 40px;
 `
 
