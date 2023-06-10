@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import styled from 'styled-components/macro';
 import { ui } from 'reducers/ui'
 // import { cart } from 'reducers/cart'
+import { Link } from 'react-router-dom';
 import { Navbar } from './Navbar';
 import { ShoppingCartIcon } from './ShoppingCartIcon';
 import { ShoppingCart } from '../shop/ShoppingCart'
@@ -33,7 +34,7 @@ export const Header = () => {
     <section>
       <HeaderWrapper>
         <LeftWrapper>
-          <Title>Normfri <br /> terapi</Title>
+          <StyledLink to="/"><Title>Normfri <br /> terapi</Title></StyledLink>
         </LeftWrapper>
         <RightWrapper>
           <LargeScreenNav>
@@ -96,4 +97,8 @@ const SmallScreenNav = styled.div`
 
 const ShoppingCartWrapper = styled.div`
   border: blue dotted 2px;
+`
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
 `
