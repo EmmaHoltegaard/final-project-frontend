@@ -1,8 +1,8 @@
 import React from 'react';
-import { Navbar } from './Navbar'
+import { NavDropDown } from './NavDropDown';
 
 export const HamburgerMenu = () => {
   return (
-    <Navbar />
+    <NavDropDown />
   )
 }

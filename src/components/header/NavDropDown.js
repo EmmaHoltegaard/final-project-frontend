@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components/macro';
 
-export const Navbar = () => {
+export const NavDropDown = () => {
   return (
     <NavOptions>
       <div><StyledNavLink to="/">Forside</StyledNavLink></div>
@@ -15,15 +15,14 @@ export const Navbar = () => {
 }
 
 const NavOptions = styled.nav`
-  display: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  text-align: center;
   @media (min-width: 1024px) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: start;
-    gap: 2rem;
-    padding-top: 10px;
-    text-align: center;
+    display: none;
   }
 `
 
@@ -31,15 +30,24 @@ const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   font-family: 'Courier Prime', 'Courier New', monospace;
   font-weight: 700;
-  color: var(--purple);
+  color: var(--white);
   font-size: 1.125rem;
+  background-color: var(--purple);
+  padding: 0.5em;
+  border-bottom: 1px var(--white) solid;
+  width: 100vw;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   &.active {
     text-decoration: underline;
+    background-color: var(--lightPurple)
   }
   &:hover {
-    text-decoration: underline;
+    background-color: var(--lightPurple)
   }
-  @media (max-width: 1023px) {
+  @media (min-width: 1024px) {
     display: none;
   }
 `
