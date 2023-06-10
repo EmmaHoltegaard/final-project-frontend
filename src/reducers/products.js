@@ -30,7 +30,7 @@ export const fetchProducts = () => {
       .finally(() => {
         setTimeout(() => {
           dispatch(ui.actions.setIsLoading(false));
-        }, 500);
+        }, 2000);
       });
   };
 };
