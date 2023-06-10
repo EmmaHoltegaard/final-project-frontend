@@ -1,12 +1,5 @@
 import styled from 'styled-components/macro'
 
-/*
-Overskrift (font 36, h2, courier)
-Button (purple, white font, )
-span: bold - boldSpan
-paragraph 18px
-*/
-
 export const Title = styled.h1`
   font-family: 'Courier Prime', 'Courier New', monospace;
   font-weight: 700;
@@ -56,8 +49,6 @@ export const StyledButton = styled.button`
     cursor: pointer;
   }
 `
-
-// add changes to button inside relevant component
 
 export const BoldSpan = styled.span`
   font-weight: 700;
