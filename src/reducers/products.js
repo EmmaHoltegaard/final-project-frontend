@@ -2,7 +2,7 @@
 // the API, and storing them into the global state.
 
 import { createSlice } from '@reduxjs/toolkit'
-import { API_KEY_ALL, BASE_URL } from 'utils/urls'
+import { BASE_URL } from 'utils/urls'
 import { ui } from 'reducers/ui'
 
 export const products = createSlice({
@@ -22,7 +22,7 @@ export const products = createSlice({
 export const fetchProducts = () => {
   return (dispatch) => {
     dispatch(ui.actions.setIsLoading(true));
-    fetch(`${BASE_URL}${API_KEY_ALL}`)
+    fetch(`${BASE_URL}products`)
       .then((res) => res.json())
       .then((data) => {
         dispatch(products.actions.setItems(data.body));
