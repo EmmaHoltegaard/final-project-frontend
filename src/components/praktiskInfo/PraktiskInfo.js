@@ -12,6 +12,8 @@ export const PraktiskInfo = () => {
   )
 }
 
+// Styled components:
+
 const SectionWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -19,8 +21,8 @@ const SectionWrapper = styled.div`
   justify-content: center;
   margin-top: 50px;
   animation: fadeIn 0.5s;
-  @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-  }
+    @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+    }
 `

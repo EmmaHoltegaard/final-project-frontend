@@ -41,7 +41,7 @@ export const InfoAccordion = () => {
   );
 };
 
-// pass props to change them slightly, when isActive = true.
+// Styled Components
 
 const AccordionWrapper = styled.div`
   width: 90%;
@@ -69,7 +69,7 @@ const TextWrapper = styled.div`
   padding: 20px 30px 20px 30px;
   background-color: var(--purple);
   color: var(--white);
-  animation: growDown 300ms ease-in-out forwards;
+  animation: growDown 1000ms ease-in-out forwards;
   transform-origin: top center;
   @keyframes growDown {
     0% {
