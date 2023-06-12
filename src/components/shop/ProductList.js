@@ -5,7 +5,6 @@ import { useSelector, useDispatch } from 'react-redux'
 import styled from 'styled-components/macro'
 import { fetchProducts } from 'reducers/products';
 import { ProductListItem } from './ProductListItem';
-import { ShoppingCart } from './ShoppingCart';
 
 export const ProductList = () => {
   const dispatch = useDispatch()
@@ -31,7 +30,6 @@ export const ProductList = () => {
             <ProductListItem key={item._id} item={item} />
           ))}
         </ListWrapper>
-        <ShoppingCart />
       </OuterWrapper>
     )
   }
