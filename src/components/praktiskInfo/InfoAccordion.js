@@ -46,7 +46,7 @@ export const InfoAccordion = () => {
 const AccordionWrapper = styled.div`
   width: 90%;
   min-width: 320px;
-  max-width: 1200px;
+  max-width: 1050px;
   /* border: greem solid 3px; */
 `
 
@@ -56,8 +56,7 @@ const AccordionSectionWrapper = styled.div`
 
 const TopicWrapper = styled.div`
   width: 100%;
-  padding-left: 50px;
-  padding-right: 50px; 
+  padding: 10px 50px 10px 50px;
   height: 56px;
   /* border: purple dotted 2px; */
   background-color: var(--transparentWhite);

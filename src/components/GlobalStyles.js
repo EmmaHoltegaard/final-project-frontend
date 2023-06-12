@@ -69,4 +69,17 @@ export const IconButton = styled.button`
   cursor: pointer;
   position: relative;
   font-family: 'Archivo', sans-serif;
+  /* border: red dotted 1px; */
+`
+
+// Butik
+export const ProductName = styled(TextPurple)`
+  margin: 0;
+  font-weight: 600;
+  line-height: normal;
+`
+
+export const Price = styled(TextPurple)`
+  margin: 0;
+  font-size: 1rem;
 `

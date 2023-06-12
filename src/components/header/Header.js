@@ -33,26 +33,26 @@ export const Header = () => {
   return (
     <section>
       <HeaderWrapper>
-        <LeftWrapper>
-          <StyledLink to="/"><Title>Normfri <br /> terapi</Title></StyledLink>
-        </LeftWrapper>
-        <RightWrapper>
-          <LargeScreenNav>
-            <Navbar />
-          </LargeScreenNav>
-          <SmallScreenNav>
-            <HamburgerIcon onMenuClick={onMenuClick} />
-          </SmallScreenNav>
-          <ShoppingCartIcon onCartClick={onCartClick} />
-        </RightWrapper>
+        <HeaderInnerWrapper>
+          <LeftWrapper>
+            <StyledLink to="/"><Title>Normfri <br /> terapi</Title></StyledLink>
+          </LeftWrapper>
+          <RightWrapper>
+            <LargeScreenNav>
+              <Navbar />
+            </LargeScreenNav>
+            <SmallScreenNav>
+              <HamburgerIcon onMenuClick={onMenuClick} />
+            </SmallScreenNav>
+            <ShoppingCartIcon onCartClick={onCartClick} />
+          </RightWrapper>
+        </HeaderInnerWrapper>
       </HeaderWrapper>
       {menuIsActive && (
         <HamburgerMenu />
       )}
       {cartIsActive && (
-        <ShoppingCartWrapper>
-          <ShoppingCart />
-        </ShoppingCartWrapper>
+        <ShoppingCart />
       )}
     </section>
   )
@@ -62,10 +62,20 @@ export const Header = () => {
 const HeaderWrapper = styled.header`
   height: 10rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding-left: 50px;
   padding-right: 50px;
   align-items: center;
+`
+
+const HeaderInnerWrapper = styled.div`
+  /* border: blue dotted 2px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1050px;
+  min-width: 300px;
 `
 
 const LeftWrapper = styled.div`
@@ -93,10 +103,6 @@ const SmallScreenNav = styled.div`
   @media (min-width: 1024px) {
     display: none;
   }
-`
-
-const ShoppingCartWrapper = styled.div`
-  border: blue dotted 2px;
 `
 
 const StyledLink = styled(Link)`
