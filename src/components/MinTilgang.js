@@ -50,7 +50,6 @@ const TextWrapper = styled.div`
   min-width: 320px;
   max-width: 550px;
   padding: 0 8px;
-  border: dotted pink 2px;
   display: flex;
   flex-direction: column;
   gap: 20px;

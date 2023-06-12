@@ -2,10 +2,14 @@ import React from 'react';
 // import { useSelector } from 'react-redux'
 import styled from 'styled-components/macro';
 import { ProductList } from './ProductList'
+import { Header1 } from '../GlobalStyles'
 
 export const Shop = () => {
   return (
     <SectionWrapper>
+      <Header1>
+        Butik
+      </Header1>
       <ProductList />
     </SectionWrapper>
   )
@@ -17,5 +21,5 @@ const SectionWrapper = styled.section`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 20px 0 50px 0;
+  margin: 50px 0 50px 0;
 `

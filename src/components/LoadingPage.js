@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Player } from '@lottiefiles/react-lottie-player'
-import animationData from 'lotties/rainbow'
+import animationData from 'lotties/rainbow2'
 
 export const LoadingPage = () => {
   return (

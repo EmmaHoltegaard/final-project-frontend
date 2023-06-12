@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { cart } from 'reducers/cart'
 import { ui } from 'reducers/ui'
 import { Header2, StyledButton, IconButton, TextPurple } from 'components/GlobalStyles';
+import trashcan from 'svg/trashcan.svg'
 
 export const ShoppingCart = () => {
   const selectedItems = useSelector((store) => store.cart.items)
@@ -20,39 +21,43 @@ export const ShoppingCart = () => {
   if (totalPrice === 0) {
     return (
       <CartWrapper>
+        <CartInnerWrapper>
+          <TopCartWrapper>
+            <Header2>Indkøbskurv</Header2>
+            <CartXButton type="button" onClick={onXClick}>
+              <ButtonContent>X</ButtonContent>
+            </CartXButton>
+          </TopCartWrapper>
+          <TextPurple>Din kurv er tom</TextPurple>
+        </CartInnerWrapper>
+      </CartWrapper>
+    )
+  }
+  return (
+    <CartWrapper>
+      <CartInnerWrapper>
         <TopCartWrapper>
           <Header2>Indkøbskurv</Header2>
           <CartXButton type="button" onClick={onXClick}>
             <ButtonContent>X</ButtonContent>
           </CartXButton>
         </TopCartWrapper>
-        <TextPurple>Din kurv er tom</TextPurple>
-      </CartWrapper>
-    )
-  }
-  return (
-    <CartWrapper>
-      <TopCartWrapper>
-        <Header2>Indkøbskurv</Header2>
-        <CartXButton type="button" onClick={onXClick}>
-          <ButtonContent>X</ButtonContent>
-        </CartXButton>
-      </TopCartWrapper>
-      <MiddleCartWrapper>
-        {selectedItems.map((item) => (
-          <ListItem key={item._id}>
-            <ListItemInnerWrapper>
-              <CartItem>{item.quantity} x {item.name} ({item.price} kr)</CartItem>
-              <CartXButton type="button" onClick={() => dispatch(cart.actions.removeItem(item))}>
-                <ButtonContent>X</ButtonContent>
-              </CartXButton>
-            </ListItemInnerWrapper>
-          </ListItem>))}
-      </MiddleCartWrapper>
-      <BottomCartWrapper>
-        <Total>I alt: {totalPrice} dkk</Total>
-        <StyledButton type="button" onClick="">Gå til betaling</StyledButton>
-      </BottomCartWrapper>
+        <MiddleCartWrapper>
+          {selectedItems.map((item) => (
+            <ListItem key={item._id}>
+              <ListItemInnerWrapper>
+                <CartItem>{item.quantity} x {item.name} ({item.price} kr)</CartItem>
+                <CartXButton type="button" onClick={() => dispatch(cart.actions.removeItem(item))}>
+                  <ButtonContent><Icon src={trashcan} alt="trashcan" /></ButtonContent>
+                </CartXButton>
+              </ListItemInnerWrapper>
+            </ListItem>))}
+        </MiddleCartWrapper>
+        <BottomCartWrapper>
+          <Total>I alt: {totalPrice} dkk</Total>
+          <StyledButton type="button" onClick="">Gå til betaling</StyledButton>
+        </BottomCartWrapper>
+      </CartInnerWrapper>
     </CartWrapper>
   )
 }
@@ -63,9 +68,18 @@ const CartWrapper = styled.section`
   padding: 25px 60px;
   margin-bottom: 25px;
   background-color: var(--transparentWhite);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   @media (max-width: 520px) {
     padding: 25px 25px;
   }
+`
+
+const CartInnerWrapper = styled.div`
+  width: 90%;
+  max-width: 1050px;
+  height: 100%;
 `
 
 const TopCartWrapper = styled.div`
@@ -102,6 +116,7 @@ const ListItemInnerWrapper = styled.div`
   justify-content: space-between;
   width: 65%;
   min-width: 200px;
+  max-width: 475px;
 `
 
 const CartXButton = styled(IconButton)`
@@ -109,6 +124,11 @@ const CartXButton = styled(IconButton)`
   width: fit-content;
   /* border: blue dashed 2px; */
   border: none;
+`
+
+const Icon = styled.img`
+  height: 25px;
+  width: 20px;
 `
 
 const ButtonContent = styled.span`

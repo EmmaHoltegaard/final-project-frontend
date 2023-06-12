@@ -4,7 +4,6 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import styled from 'styled-components/macro'
 import { fetchProducts } from 'reducers/products';
-import { Header1 } from 'components/GlobalStyles';
 import { ProductListItem } from './ProductListItem';
 
 export const ProductList = () => {
@@ -26,7 +25,6 @@ export const ProductList = () => {
   } else {
     return (
       <OuterWrapper>
-        <Header>Butik</Header>
         <ListWrapper>
           {productsList.map((item) => (
             <ProductListItem key={item._id} item={item} />
@@ -43,7 +41,7 @@ export const ProductList = () => {
 const OuterWrapper = styled.div`
   width: 90%;
   max-width: 1050px;
-  /* border: blue dotted 3px; */
+  margin-top: 10px;
   `
 
 const ListWrapper = styled.div`
@@ -52,10 +50,5 @@ const ListWrapper = styled.div`
   gap: 20px;
   align-items: center;
   justify-content: center;
-
-`
-
-const Header = styled(Header1)`
-text-align: left;
-margin-left: 25px;
+  margin-top: 30px;
 `

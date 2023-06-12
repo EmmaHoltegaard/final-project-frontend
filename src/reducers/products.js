@@ -33,7 +33,7 @@ export const fetchProducts = () => {
       .finally(() => {
         setTimeout(() => {
           dispatch(ui.actions.setIsLoading(false));
-        }, 200);
+        }, 2000);
       });
   };
 };
@@ -49,9 +49,7 @@ export const fetchSingleProduct = (_id) => {
         console.log(data.body)
       })
       .finally(() => {
-        setTimeout(() => {
-          dispatch(ui.actions.setIsLoading(false));
-        }, 100);
+        dispatch(ui.actions.setIsLoading(false));
       })
   }
 }
