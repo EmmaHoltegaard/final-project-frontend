@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { TextPurple, BoldSpan } from '../GlobalStyles'
+import { TextPurple, BoldSpan, Header1 } from '../GlobalStyles'
 import { ContactForm } from './ContactForm'
 
 export const Kontakt = () => {
   return (
     <SectionWrapper>
       <TextWrapper>
+        <Header1>Kontakt mig</Header1>
         <TextPurple>
           Hvis du er interesseret i at komme i forløb hos mig er du velkommen til at række ud
           via kontaktformularen her eller ved at sende en mail
@@ -30,10 +31,17 @@ export const Kontakt = () => {
 const SectionWrapper = styled.section`
 display: flex;
 flex-direction: column;
+align-items: center;
+justify-content: center;
 `
 
 const TextWrapper = styled.div`
 display: flex;
 flex-direction: column;
 gap: 10px;
+width: 50%;
+min-width: 300px;
+max-width: 575px;
+text-align: center;
+margin: 50px auto;
 `

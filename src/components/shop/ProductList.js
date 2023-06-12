@@ -38,6 +38,8 @@ export const ProductList = () => {
   }
 }
 
+// Styled components
+
 const OuterWrapper = styled.div`
   width: 90%;
   max-width: 1050px;

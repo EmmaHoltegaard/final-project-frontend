@@ -14,13 +14,12 @@ export const SingleProduct = () => {
   const navigate = useNavigate()
 
   const product = useSelector((state) => state.products.singleItem);
+  const isLoading = useSelector((store) => store.ui.isLoading)
 
   // calls on thunk to fetch single products from api.
   useEffect(() => {
     dispatch(fetchSingleProduct(id));
   }, [id, dispatch])
-
-  const isLoading = useSelector((store) => store.ui.isLoading)
 
   const onBackButtonClick = () => {
     navigate(-1)
@@ -108,7 +107,6 @@ const TextOuterWrapper = styled.div`
 `
 
 const TextInnerWrapper = styled.div`
-
 `
 
 const Description = styled(TextPurple)`

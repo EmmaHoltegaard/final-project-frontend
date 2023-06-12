@@ -56,8 +56,7 @@ const AccordionSectionWrapper = styled.div`
 
 const TopicWrapper = styled.div`
   width: 100%;
-  padding: 10px 50px 10px 50px;
-  height: 56px;
+  padding: 15px 50px 15px 50px;
   /* border: purple dotted 2px; */
   background-color: var(--transparentWhite);
   display: flex; 

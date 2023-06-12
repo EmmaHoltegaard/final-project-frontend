@@ -57,6 +57,7 @@ export const ShoppingCart = () => {
   )
 }
 
+// Styled components
 const CartWrapper = styled.section`
   min-height: 150px;
   padding: 25px 60px;

@@ -17,6 +17,8 @@ export const LoadingPage = () => {
   )
 }
 
+// Styled components
+
 const LoaderWrapper = styled.div`
   width: 300px;
   height: 200px;

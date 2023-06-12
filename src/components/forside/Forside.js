@@ -31,7 +31,7 @@ const SectionWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 75vh;
+  min-height: 80vh;
 `
 
 const ContentWrapper = styled.div`
