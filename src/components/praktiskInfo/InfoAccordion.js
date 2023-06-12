@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { ui } from 'reducers/ui'
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components/macro';
 import triangle from 'svg/triangle.svg'
 import { InfoAccordionData } from './InfoAccordionData';
 import { TextWhite, Header2 } from '../GlobalStyles'
@@ -63,11 +63,25 @@ const TopicWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
 `
+
 const TextWrapper = styled.div`
   width: 100%;
   padding: 20px 30px 20px 30px;
   background-color: var(--purple);
   color: var(--white);
+  animation: growDown 300ms ease-in-out forwards;
+  transform-origin: top center;
+  @keyframes growDown {
+    0% {
+        transform: scaleY(0)
+    }
+    80% {
+        transform: scaleY(1.1)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+  }
 `
 
 const ActiveIcon = styled.img`

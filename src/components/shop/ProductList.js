@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import styled from 'styled-components/macro'
 import { fetchProducts } from 'reducers/products';
 import { ProductListItem } from './ProductListItem';
+import { ShoppingCart } from './ShoppingCart';
 
 export const ProductList = () => {
   const dispatch = useDispatch()
@@ -30,8 +31,8 @@ export const ProductList = () => {
             <ProductListItem key={item._id} item={item} />
           ))}
         </ListWrapper>
+        <ShoppingCart />
       </OuterWrapper>
-
     )
   }
 }
@@ -42,6 +43,9 @@ const OuterWrapper = styled.div`
   width: 90%;
   max-width: 1050px;
   margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
   `
 
 const ListWrapper = styled.div`
@@ -51,4 +55,9 @@ const ListWrapper = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 30px;
+  animation: fadeIn 0.5s;
+    @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+    }
 `

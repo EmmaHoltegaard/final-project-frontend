@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { Player } from '@lottiefiles/react-lottie-player'
 import animationData from 'lotties/rainbow2'
 

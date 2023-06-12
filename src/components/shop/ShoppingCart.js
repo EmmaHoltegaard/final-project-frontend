@@ -1,6 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { useSelector, useDispatch } from 'react-redux';
 import { cart } from 'reducers/cart'
 import { ui } from 'reducers/ui'
@@ -71,8 +71,13 @@ const CartWrapper = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: fadeIn 0.5s;
   @media (max-width: 520px) {
     padding: 25px 25px;
+  }
+  @keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
   }
 `
 

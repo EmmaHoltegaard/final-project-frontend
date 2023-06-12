@@ -22,4 +22,9 @@ const SectionWrapper = styled.section`
   justify-content: center;
   flex-direction: column;
   margin: 50px 0 50px 0;
+  animation: fadeIn 0.5s;
+    @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+    }
 `

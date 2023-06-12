@@ -42,6 +42,11 @@ const SectionWrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: fadeIn 0.5s;
+    @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+    }
 `
 
 const TextWrapper = styled.div`

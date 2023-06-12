@@ -2,7 +2,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux'
 import { cart } from 'reducers/cart'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { Link } from 'react-router-dom';
 import { StyledButton, ProductName, Price } from '../GlobalStyles'
 
@@ -23,6 +23,8 @@ export const ProductListItem = ({ item }) => {
     </ProductWrapper>
   )
 }
+
+// Styled components:
 
 const ProductWrapper = styled.div`
   width: 245px;

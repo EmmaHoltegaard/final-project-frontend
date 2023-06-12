@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { TextPurple, BoldSpan, Header1 } from '../GlobalStyles'
 import { ContactForm } from './ContactForm'
 
@@ -33,6 +33,11 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+animation: fadeIn 0.5s;
+    @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+    }
 `
 
 const TextWrapper = styled.div`

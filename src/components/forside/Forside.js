@@ -31,7 +31,12 @@ const SectionWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 80vh;
+  min-height: 85vh;
+  animation: fadeIn 0.5s;
+  @keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+  }
 `
 
 const ContentWrapper = styled.div`
@@ -43,12 +48,12 @@ const ContentWrapper = styled.div`
   margin-bottom: 30px;
   @media (min-width: 620px) {
     flex-direction: row;
-    gap: 5px;
+    gap: 10px;
   }
 `
 
 const Image = styled.img`
-  height: 198px;
+  height: 240px;
 `
 
 const TextWrapper = styled.div`

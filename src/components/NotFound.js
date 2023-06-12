@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import { Player } from '@lottiefiles/react-lottie-player'
 import animationData from 'lotties/not-found'
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { Header2, StyledButton } from './GlobalStyles';
 
 export const NotFound = () => {
@@ -30,7 +30,12 @@ const SectionWrapper = styled.section`
   /* border: blue dotted 1px; */
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  margin: 50px auto 70px auto;
+  animation: fadeIn 0.5s;
+  @keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+  }
 `
 
 const PlayerWrapper = styled.div`

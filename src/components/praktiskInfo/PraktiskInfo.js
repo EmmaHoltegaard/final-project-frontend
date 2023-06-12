@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { Header1 } from 'components/GlobalStyles';
 import { InfoAccordion } from './InfoAccordion';
 
@@ -17,7 +17,10 @@ const SectionWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* width: 100%; */
   margin-top: 50px;
-  /* border: red dotted 4px; */
+  animation: fadeIn 0.5s;
+  @keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+  }
 `

@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import lineart2 from 'svg/lineart2.svg'
 import { Header1, TextPurple, BoldSpan, SemiBoldSpan } from '../GlobalStyles'
 import { UddannelseData } from './UddannelseData';
@@ -34,6 +34,14 @@ export const Uddannelse = () => {
   )
 }
 
+const SectionWrapper = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--pink);
+`
+
 const Image = styled.img`
   /* border: white dotted 4px; */
   height: 491px;
@@ -42,14 +50,6 @@ const Image = styled.img`
   @media (max-width: 550px) {
     display:none;
   }
-`
-
-const SectionWrapper = styled.div`
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  min-height: 80vh;
-  background-color: var(--pink);
 `
 
 const ContentWrapper = styled.div`

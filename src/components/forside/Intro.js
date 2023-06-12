@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import lineart from 'svg/lineart1.svg'
 import profilBillede from 'images/rebekka-profilbillede.jpg'
 import { Header1, TextWhite } from '../GlobalStyles'
@@ -34,7 +34,7 @@ const SectionWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 80vh;
+  min-height: 100vh;
   background-color: var(--purple);
   padding-top: 150px;
   padding-bottom: 100px;

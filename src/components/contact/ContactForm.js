@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BASE_URL } from 'utils/urls';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { StyledButton } from 'components/GlobalStyles';
 
 export const ContactForm = () => {
