@@ -85,7 +85,6 @@ const ProductWrapper = styled.div`
 
 const StyledImage = styled.img`
   width: 40%;
-  /* max-width: 200px; */
   height: 200px;
   object-fit: cover;
   @media (max-width: 550px) {
@@ -100,7 +99,6 @@ const TextOuterWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* border: blue dotted 2px; */
   @media (max-width: 550px) {
     width: 100%;
   }

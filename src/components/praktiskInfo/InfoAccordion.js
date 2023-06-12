@@ -69,18 +69,12 @@ const TextWrapper = styled.div`
   padding: 20px 30px 20px 30px;
   background-color: var(--purple);
   color: var(--white);
-  animation: growDown 1000ms ease-in-out forwards;
-  transform-origin: top center;
-  @keyframes growDown {
-    0% {
-        transform: scaleY(0)
-    }
-    80% {
-        transform: scaleY(1.1)
-    }
-    100% {
-        transform: scaleY(1)
-    }
+  /* animation: growDown 500ms ease-in-out forwards; */
+  /* transform-origin: top center; */
+  animation: fadeIn 0.5s;
+  @keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
   }
 `
 

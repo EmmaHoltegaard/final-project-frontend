@@ -16,6 +16,7 @@ export const Shop = () => {
 }
 
 // Styled components
+
 const SectionWrapper = styled.section`
   display: flex;
   align-items: center;
