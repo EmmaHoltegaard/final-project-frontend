@@ -14,6 +14,8 @@ export const Navbar = () => {
   )
 }
 
+// Styled components
+
 const NavOptions = styled.nav`
   display: none;
   @media (min-width: 1024px) {

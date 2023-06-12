@@ -34,6 +34,8 @@ export const Uddannelse = () => {
   )
 }
 
+// Styled Components
+
 const SectionWrapper = styled.div`
   display: flex;
   align-items: flex-start;
@@ -43,7 +45,6 @@ const SectionWrapper = styled.div`
 `
 
 const Image = styled.img`
-  /* border: white dotted 4px; */
   height: 491px;
   width: 206px;
   margin-top: 0;
@@ -53,7 +54,6 @@ const Image = styled.img`
 `
 
 const ContentWrapper = styled.div`
-  /* border: white dotted 4px; */
   margin-top: 100px;
   margin-right: 40px;
   min-width: 320px;
@@ -65,7 +65,6 @@ const ContentWrapper = styled.div`
 `
 
 const ExperienceWrapper = styled.div`
-  /* border: red dotted 1px; */
   display: flex;
   flex-direction: column;
   align-items: flex-start;

@@ -76,7 +76,6 @@ export const IconButton = styled.button`
   cursor: pointer;
   position: relative;
   font-family: 'Archivo', sans-serif;
-  /* border: red dotted 1px; */
 `
 
 // Butik

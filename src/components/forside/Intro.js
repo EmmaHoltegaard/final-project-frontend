@@ -30,6 +30,8 @@ export const Intro = () => {
   )
 }
 
+// Styled components
+
 const SectionWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -42,13 +44,11 @@ const SectionWrapper = styled.div`
 
 const Header1White = styled(Header1)`
   color: var(--white);
-  /* border: pink dotted 1px; */
 `
 
 const ContentWrapper = styled.div`
   display: flex;
   gap: 10px;
-  /* border: white dashed 2px; */
   @media (max-width: 1023px) {
     flex-direction: column;
     justify-content: center;
@@ -72,12 +72,10 @@ const ImageWrapper = styled.div`
   height: 369px;
   width: 325px;
   display: flex;
-  /* border: blue dotted 2px; */
   align-items: center;
   justify-content: center;
 `
 
-// Change div to img of Rebekka
 const Image = styled.img`
   background: var(--white);
   border: 8px solid var(--pink);

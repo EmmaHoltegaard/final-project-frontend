@@ -14,6 +14,8 @@ export const ShoppingCartIcon = ({ onCartClick }) => {
   )
 }
 
+// Styled Components
+
 const ItemCount = styled.span`
   background-color: var(--purple);
   font-size: 0.8rem;

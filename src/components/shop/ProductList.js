@@ -8,10 +8,8 @@ import { ProductListItem } from './ProductListItem';
 
 export const ProductList = () => {
   const dispatch = useDispatch()
-  // selects products from global state
   const productsList = useSelector((state) => state.products.items)
 
-  // calls on thunk to fetch products from api.
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch])

@@ -47,7 +47,7 @@ const AccordionWrapper = styled.div`
   width: 90%;
   min-width: 320px;
   max-width: 1050px;
-  /* border: greem solid 3px; */
+  margin-top: 40px;
 `
 
 const AccordionSectionWrapper = styled.div`
@@ -57,11 +57,11 @@ const AccordionSectionWrapper = styled.div`
 const TopicWrapper = styled.div`
   width: 100%;
   padding: 15px 50px 15px 50px;
-  /* border: purple dotted 2px; */
   background-color: var(--transparentWhite);
   display: flex; 
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 `
 
 const TextWrapper = styled.div`

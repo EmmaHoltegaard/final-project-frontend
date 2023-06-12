@@ -27,7 +27,6 @@ export const NotFound = () => {
 const SectionWrapper = styled.section`
   display: flex;
   flex-direction: column;
-  /* border: blue dotted 1px; */
   align-items: center;
   justify-content: center;
   margin: 50px auto 70px auto;

@@ -21,6 +21,8 @@ export const NavDropDown = () => {
   )
 }
 
+// Styled Components
+
 const NavOptions = styled.nav`
   display: flex;
   flex-direction: column;
