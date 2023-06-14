@@ -69,7 +69,6 @@ const HeaderWrapper = styled.header`
 `
 
 const HeaderInnerWrapper = styled.div`
-  /* border: blue dotted 2px; */
   display: flex;
   justify-content: space-between;
   align-items: center;

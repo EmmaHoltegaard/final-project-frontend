@@ -100,7 +100,6 @@ const MiddleCartWrapper = styled.ul`
 
 const BottomCartWrapper = styled.div`
   display: flex;
-  /* border: red dotted 2px; */
   align-items: flex-end;
   gap: 20px;
   justify-content: flex-end;
@@ -127,7 +126,6 @@ const ListItemInnerWrapper = styled.div`
 const CartXButton = styled(IconButton)`
   height: fit-content;
   width: fit-content;
-  /* border: blue dashed 2px; */
   border: none;
 `
 

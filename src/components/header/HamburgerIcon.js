@@ -11,6 +11,8 @@ export const HamburgerIcon = ({ onMenuClick }) => {
   )
 }
 
+// Styled components
+
 const Icon = styled.img`
 height: 50px;
 width: 50px;

@@ -1,64 +1,54 @@
-import React, { useState } from 'react';
-import { BASE_URL } from 'utils/urls';
+/* eslint-disable jsx-a11y/label-has-associated-control */
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser'
 import styled from 'styled-components/macro';
-import { StyledButton } from 'components/GlobalStyles';
 
 export const ContactForm = () => {
-  const [status, setStatus] = useState('Submit');
-  const handleSubmit = async (e) => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
     e.preventDefault();
-    setStatus('Sending...')
-    const { name, email, phone, pronouns, message } = e.target.elements;
-    const details = {
-      name: name.value,
-      email: email.value,
-      phone: phone.value,
-      pronouns: pronouns.value,
-      message: message.value
-    };
-    const response = await fetch(`${BASE_URL}contact`, {
-      method: 'POST',
-      headers: {
-        'Content-type': 'application/json;charset=utf-8'
-      },
-      body: JSON.stringify(details)
-    });
-    setStatus('Submit');
-    const result = await response.json()
-    alert(result.status)
+
+    emailjs.sendForm(
+      process.env.REACT_APP_SERVICE_ID,
+      process.env.REACT_APP_TEMPLATE_ID,
+      form.current,
+      process.env.REACT_APP_PUBLIC_KEY
+    )
+      .then((result) => {
+        console.log(result.text);
+        console.log('Beskeden blev sendt')
+      }, (error) => {
+        console.log(error.text);
+      });
   };
   return (
     <FormWrapper>
-      <StyledForm onSubmit={handleSubmit}>
-        <StyledLabel htmlFor="name">
-            Navn*:
-          <StyledInput id="name" type="text" required />
-        </StyledLabel>
-        <StyledLabel htmlFor="email">
-            Email*:
-          <StyledInput id="email" type="email" required />
-        </StyledLabel>
-        <StyledLabel htmlFor="phone">
-            Telefon:
-          <StyledInput id="phone" type="tel" />
-        </StyledLabel>
-        <StyledLabel htmlFor="pronouns">
-            Foretrukne pronominer:
-          <StyledInput id="pronouns" type="text" />
-        </StyledLabel>
-        <StyledLabel htmlFor="message">
-            Hvad drejer henvendelsen sig om?*:
-          <StyledTextAreaInput id="message" required />
-        </StyledLabel>
-        <ButtonWrapper>
-          <SubmitButton type="submit">{status}</SubmitButton>
-        </ButtonWrapper>
-      </StyledForm>
-    </FormWrapper>
-  )
-}
+      <form ref={form} onSubmit={sendEmail}>
+        <StyledLabel htmlFor="name">Name*</StyledLabel>
+        <StyledInput id="name" type="text" name="user_name" required />
 
-// Styled Components
+        <StyledLabel htmlFor="">Email*</StyledLabel>
+        <StyledInput type="email" name="user_email" required />
+
+        <StyledLabel htmlFor="phone">Phone</StyledLabel>
+        <StyledInput id="phone" type="tel" name="user_phone" />
+
+        <StyledLabel htmlFor="pronouns">Pronouns</StyledLabel>
+        <StyledInput id="pronouns" type="text" name="user_pronouns" />
+
+        <StyledLabel htmlFor="message">Message</StyledLabel>
+        <StyledTextAreaInput id="message" name="message" required />
+
+        <ButtonWrapper>
+          <SubmitButton type="submit">Send</SubmitButton>
+        </ButtonWrapper>
+
+      </form>
+    </FormWrapper>
+
+  );
+};
 
 const FormWrapper = styled.div`
   background: var(--transparentWhite);
@@ -72,9 +62,11 @@ const FormWrapper = styled.div`
     width: 100%;
     padding: 50px 30px;
   }
-`
 
-const StyledForm = styled.form`
+  form {
+    display: flex;
+    flex-direction: column;
+  }
 `
 
 const StyledLabel = styled.label`
@@ -85,8 +77,8 @@ const StyledLabel = styled.label`
   font-size: 1.125rem;
   font-weight: 700;
   gap: 5px;
-  margin-bottom: 35px;
   min-width: 240px;
+  margin-bottom: 5px;
 `
 
 const StyledInput = styled.input`
@@ -98,6 +90,7 @@ const StyledInput = styled.input`
   color: var(--purple);
   outline: none;
   border: 2px solid transparent;
+  margin-bottom: 25px;
   &:focus {
     border-color: var(--purple)
   }
@@ -113,6 +106,7 @@ const StyledTextAreaInput = styled.textarea`
   height: 200px;
   outline: none;
   border: 2px solid transparent;
+  margin-bottom: 25px;
   &:focus {
     border-color: var(--purple)
   }
@@ -124,7 +118,17 @@ const ButtonWrapper = styled.div`
   justify-content: center;
 `
 
-const SubmitButton = styled(StyledButton)`
+const SubmitButton = styled.button`
   font-size: 1.25rem;
   width: 130px;
+  border: none;
+  background-color: var(--purple);
+  font-family: 'Archivo', sans-serif;
+  padding: 0.4em;
+  color: var(--white);
+  border-radius: 7px;
+  &:hover {
+    background-color: var(--darkPurple);
+    cursor: pointer;
+  }
 `
