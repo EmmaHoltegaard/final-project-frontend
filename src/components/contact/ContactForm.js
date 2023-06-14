@@ -1,10 +1,11 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser'
 import styled from 'styled-components/macro';
 
 export const ContactForm = () => {
   const form = useRef();
+  const [isSubmitted, setIsSubmitted] = useState(false)
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -18,6 +19,8 @@ export const ContactForm = () => {
       .then((result) => {
         console.log(result.text);
         console.log('Beskeden blev sendt')
+        setIsSubmitted(true)
+        e.target.reset()
       }, (error) => {
         console.log(error.text);
         console.log(process.env.REACT_APP_PUBLIC_KEY)
@@ -44,7 +47,7 @@ export const ContactForm = () => {
         <ButtonWrapper>
           <SubmitButton type="submit">Send</SubmitButton>
         </ButtonWrapper>
-
+        {isSubmitted && <p>Din besked blev sendt.</p>}
       </form>
     </FormWrapper>
 
