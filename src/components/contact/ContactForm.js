@@ -23,7 +23,6 @@ export const ContactForm = () => {
         e.target.reset()
       }, (error) => {
         console.log(error.text);
-        console.log(process.env.REACT_APP_PUBLIC_KEY)
       });
   };
   return (
