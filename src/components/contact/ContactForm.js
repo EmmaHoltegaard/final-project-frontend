@@ -40,11 +40,11 @@ export const ContactForm = () => {
         <StyledLabel htmlFor="pronouns">Pronouns</StyledLabel>
         <StyledInput id="pronouns" type="text" name="user_pronouns" />
 
-        <StyledLabel htmlFor="message">Message</StyledLabel>
+        <StyledLabel htmlFor="message">Message*</StyledLabel>
         <StyledTextAreaInput id="message" name="message" required />
 
         <ButtonWrapper>
-          <SubmitButton type="submit">Send</SubmitButton>
+          <SubmitButton type="submit">send</SubmitButton>
         </ButtonWrapper>
         {isSubmitted && <p>Din besked blev sendt.</p>}
       </form>
