@@ -2,6 +2,7 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser'
 import styled from 'styled-components/macro';
+import { TextPurple } from 'components/GlobalStyles';
 
 export const ContactForm = () => {
   const form = useRef();
@@ -34,19 +35,21 @@ export const ContactForm = () => {
         <StyledLabel htmlFor="">Email*</StyledLabel>
         <StyledInput type="email" name="user_email" required />
 
-        <StyledLabel htmlFor="phone">Phone</StyledLabel>
+        <StyledLabel htmlFor="phone">Telefon</StyledLabel>
         <StyledInput id="phone" type="tel" name="user_phone" />
 
-        <StyledLabel htmlFor="pronouns">Pronouns</StyledLabel>
+        <StyledLabel htmlFor="pronouns">Foretrukne pronominer</StyledLabel>
         <StyledInput id="pronouns" type="text" name="user_pronouns" />
 
-        <StyledLabel htmlFor="message">Message*</StyledLabel>
+        <StyledLabel htmlFor="message">Hvad drejer henvendelsen sig om?*</StyledLabel>
         <StyledTextAreaInput id="message" name="message" required />
 
         <ButtonWrapper>
-          <SubmitButton type="submit">send</SubmitButton>
+          <SubmitButton type="submit">Send</SubmitButton>
+          <SubmitMessageWrapper>
+            {isSubmitted && <SubmitMessage>Beskeden blev sendt</SubmitMessage>}
+          </SubmitMessageWrapper>
         </ButtonWrapper>
-        {isSubmitted && <p>Din besked blev sendt.</p>}
       </form>
     </FormWrapper>
 
@@ -58,7 +61,7 @@ const FormWrapper = styled.div`
   width: 75%;
   min-width: 315px;
   max-width: 480px;
-  padding: 60px 50px;
+  padding: 60px 50px 20px 50px;
   border-radius: 20px;
   margin-bottom: 50px;
   @media (max-width: 460px) {
@@ -117,12 +120,14 @@ const StyledTextAreaInput = styled.textarea`
 
 const ButtonWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 10px;
 `
 
 const SubmitButton = styled.button`
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   width: 130px;
   border: none;
   background-color: var(--purple);
@@ -130,8 +135,17 @@ const SubmitButton = styled.button`
   padding: 0.4em;
   color: var(--white);
   border-radius: 7px;
+  margin-bottom: 20px;
   &:hover {
     background-color: var(--darkPurple);
     cursor: pointer;
   }
+`
+
+const SubmitMessageWrapper = styled.div`
+  height: 32px;
+`
+
+const SubmitMessage = styled(TextPurple)`
+  font-weight: 500;
 `
