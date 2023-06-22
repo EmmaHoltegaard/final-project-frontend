@@ -15,14 +15,12 @@ import { NotFound } from './components/NotFound';
 import { Header } from './components/header/Header';
 import { SingleProduct } from './components/shop/SingleProduct'
 
-// Combining reducer slices into a single reducer
 const reducer = combineReducers({
   cart: cart.reducer,
   products: products.reducer,
   ui: ui.reducer
 })
 
-// Use the reducer to create the global store
 const store = configureStore({ reducer })
 
 export const App = () => {

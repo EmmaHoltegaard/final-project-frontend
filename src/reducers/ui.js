@@ -1,3 +1,4 @@
+// Slice that deals with loading + toggles
 import { createSlice } from '@reduxjs/toolkit'
 
 export const ui = createSlice({

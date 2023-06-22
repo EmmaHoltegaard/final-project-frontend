@@ -6,7 +6,6 @@
 }
 
 :root {
-  /* colours go here */
   --purple: #7168D9;
   --darkPurple: #665BE1;
   --lightPurple: #B4AFF2;
@@ -19,11 +18,7 @@
 
 body {
   margin: 0;
-  font-family: "Archivo", "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  /* font-family: 'Archivo', sans-serif;
-  font-family: 'Courier Prime', 'Courier New', monospace; */
+  font-family: "Archivo", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(150deg,#CFEDEE 20%,#EAD6F2 40%, #CFEDEE 60% );

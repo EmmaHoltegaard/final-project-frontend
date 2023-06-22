@@ -16,7 +16,6 @@ export const SingleProduct = () => {
   const product = useSelector((state) => state.products.singleItem);
   const isLoading = useSelector((store) => store.ui.isLoading)
 
-  // calls on thunk to fetch single products from api.
   useEffect(() => {
     dispatch(fetchSingleProduct(id));
   }, [id, dispatch])

@@ -27,6 +27,8 @@ export const Forside = () => {
   )
 }
 
+// Styled components
+
 const SectionWrapper = styled.div`
   display: flex;
   align-items: center;

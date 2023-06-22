@@ -12,23 +12,16 @@ import { HamburgerMenu } from './HamburgerMenu';
 import { Title } from '../GlobalStyles'
 
 export const Header = () => {
-  // selector to get the current state.
   const cartIsActive = useSelector((state) => state.ui.cartIsActive);
   const menuIsActive = useSelector((state) => state.ui.menuIsActive);
-  // define dispatch
   const dispatch = useDispatch();
-  // Toggle Function(s)
+
   const onCartClick = () => {
     dispatch(ui.actions.toggleCart())
   }
   const onMenuClick = () => {
     dispatch(ui.actions.toggleMenu())
   }
-
-  // On large screens: LargeScreenNav is mounted
-  // On small screens: SmallScreenNav is mounted.
-  // if menuIsActive = true, the navmenu will show
-  // if cartIsActive = true, the cart will show
 
   return (
     <section>
