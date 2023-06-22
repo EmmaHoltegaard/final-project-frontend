@@ -9,7 +9,6 @@ import { TextWhite, Header2 } from '../GlobalStyles'
 export const InfoAccordion = () => {
   const activeTopicId = useSelector((state) => state.ui.activeTopicId);
   const dispatch = useDispatch();
-  // Toggle Function(s)
   const onTopicClick = (itemId) => {
     if (itemId === activeTopicId) {
       dispatch(ui.actions.toggleInfo(null))
@@ -47,7 +46,7 @@ const AccordionWrapper = styled.div`
   width: 90%;
   min-width: 320px;
   max-width: 1050px;
-  margin-top: 40px;
+  margin: 40px auto 60px auto;
 `
 
 const AccordionSectionWrapper = styled.div`

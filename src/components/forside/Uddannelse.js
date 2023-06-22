@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro'
 import lineart2 from 'svg/lineart2.svg'
-import { Header1, TextPurple, BoldSpan, SemiBoldSpan } from '../GlobalStyles'
+import { Header1, TextPurple, BoldSpan } from '../GlobalStyles'
 import { UddannelseData } from './UddannelseData';
 import { KurserData } from './KurserData';
 
@@ -17,7 +17,7 @@ export const Uddannelse = () => {
               <BoldSpan>{item.year}: </BoldSpan>
               {item.description}
               <br />
-              <SemiBoldSpan> {item.source}</SemiBoldSpan>
+              {item.source}
             </Experience>
           ))}
         </ExperienceWrapper>

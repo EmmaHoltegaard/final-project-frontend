@@ -2,7 +2,7 @@ export const KurserData = [
   {
     id: 1,
     description: 'Tegneterapi',
-    source: 'Benedikte Bonnevieh'
+    source: 'Benedikte Bonnevihe'
   },
   {
     id: 2,

@@ -7,6 +7,7 @@ import { TextPurple } from 'components/GlobalStyles';
 export const ContactForm = () => {
   const form = useRef();
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [submitError, setSubmitError] = useState(false)
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -21,9 +22,12 @@ export const ContactForm = () => {
         console.log(result.text);
         console.log('Beskeden blev sendt')
         setIsSubmitted(true)
+        setSubmitError(false)
         e.target.reset()
       }, (error) => {
         console.log(error.text);
+        setIsSubmitted(false)
+        setSubmitError(true)
       });
   };
   return (
@@ -48,6 +52,10 @@ export const ContactForm = () => {
           <SubmitButton type="submit">Send</SubmitButton>
           <SubmitMessageWrapper>
             {isSubmitted && <SubmitMessage>Beskeden blev sendt</SubmitMessage>}
+            {submitError && (
+              <SubmitMessage>
+                Beskeden kunne ikke sendes. Send i stedet en mail til normfri.terapi@gmail.com
+              </SubmitMessage>)}
           </SubmitMessageWrapper>
         </ButtonWrapper>
       </form>
